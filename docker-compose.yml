@@ -1,0 +1,10 @@
+#docker-compose makes networking or connecting many containsers straigh forward
+version: '3'
+services: 
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: always #Other options always, on-failure, unless-stopped, "no". no specifically bind with quotes
+    build: .
+    ports: 
+      - "8080:8080"
