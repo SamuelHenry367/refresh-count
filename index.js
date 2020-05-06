@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 //    process.exit(0) //Default 0:OK, 0< -> something went wrong
     client.get('visits', (err, visits) => {
         res.send('Number of visits is ' + visits)
-        client.set('Vists', parseInt(visits) + 1)
+        client.set('visits', parseInt(visits) + 1)
     })
 });
 
